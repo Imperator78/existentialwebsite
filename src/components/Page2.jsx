@@ -214,7 +214,7 @@ export default function Page2({ onNext }) {
             />
           </div>
         </form>
-        <button className="find-meaning-btn" onClick={onNext}>
+        <button class="find-meaning-btn" onClick={onNext}>
           Find meaning
         </button>
       </div>

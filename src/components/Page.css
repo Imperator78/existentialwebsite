@@ -289,8 +289,8 @@ font-size: 2rem;
 }
 
 .submit-button {
-  background-color: rgba(255, 255, 255, 0.9);
-  color: #555555;
+  background-color: rgba(99, 214, 32, 0.9);
+  color: #5a197d;
   border: none;
   padding: 12px 30px;
   font-size: 1rem;
@@ -307,7 +307,7 @@ font-size: 2rem;
 }
 
 .nav-button {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
   color: white;
   border: 2px solid white;
   padding: 12px 30px;
@@ -319,7 +319,7 @@ font-size: 2rem;
 }
 
 .nav-button:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(127, 127, 127, 0.3);
   transform: scale(1.05);
 }
 
@@ -336,6 +336,31 @@ font-size: 2rem;
 
 .next-button {
   order: 2;
+}
+
+.find-meaning-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #cc0000;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.find-meaning-btn:hover {
+  background-color: #990000;
+  transform: translateY(-2px);
+}
+
+.find-meaning-btn:active {
+  transform: translateY(0);
 }
 
 @media (max-width: 768px) {
@@ -370,43 +395,11 @@ font-size: 2rem;
     gap: 1rem;
   }
 
-  .prev-button,
-
   .find-meaning-btn {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    background-color: #cc0000;
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-
-  .find-meaning-btn:hover {
-    background-color: #990000;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-  }
-
-  .find-meaning-btn:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  }
-
-  @media (max-width: 768px) {
-    .find-meaning-btn {
-      bottom: 1rem;
-      right: 1rem;
-      padding: 10px 20px;
-      font-size: 0.9rem;
-    }
+    bottom: 1rem;
+    right: 1rem;
+    padding: 10px 20px;
+    font-size: 0.9rem;
   }
   .next-button {
     width: 100%;

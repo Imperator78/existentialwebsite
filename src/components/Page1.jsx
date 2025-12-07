@@ -12,9 +12,6 @@ export default function Page1({ onNext }) {
           Next →
         </button>
       </div>
-      <button className="find-meaning-btn" onClick={onNext}>
-        Find meaning
-      </button>
     </section>
   )
 }
