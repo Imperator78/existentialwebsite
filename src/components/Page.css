@@ -23,28 +23,28 @@
 }
 
 .page-1 {
-  background: linear-gradient(135deg, #4a4a4a 0%, #2d2d2d 100%);
-  color: white;
+  background-color: #e8e8e8;
+  color: #333333;
 }
 
 .page-1 h1 {
   font-size: 3.5rem;
   margin-bottom: 1rem;
   font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  color: #333333;
 }
 
 .page-1 h2 {
-font-size: 2rem;
+  font-size: 2rem;
   margin-bottom: 0.5rem;
   font-weight: 500;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  color: #333333;
 }
 
 .page-1 p {
   font-size: 1.3rem;
   margin-bottom: 2rem;
-  opacity: 0.95;
+  color: #333333;
 }
 
 .page-2 {
@@ -65,20 +65,21 @@ font-size: 2rem;
 }
 
 .page-3 {
-  background: linear-gradient(135deg, #6b6b6b 0%, #4a4a4a 100%);
-  color: white;
+  background-color: #e8e8e8;
+  color: #333333;
 }
 
 .page-3 h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   font-weight: 700;
+  color: #333333;
 }
 
 .page-3 > .page-content > p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  opacity: 0.95;
+  color: #555555;
 }
 
 .features-grid {
