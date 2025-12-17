@@ -554,7 +554,7 @@ font-size: 2rem;
 
 .minesweeper-grid {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   gap: 4px;
   padding: 1rem;
   background: rgba(0, 0, 0, 0.3);
@@ -650,7 +650,7 @@ font-size: 2rem;
   }
 
   .minesweeper-grid {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(8, 1fr);
   }
 
   .minesweeper-cell {

@@ -6,3 +6,6 @@ Figure it out yourself, there's literally a button that skips the page
 
 ## I hate you, this is so annoying
 Yes! We've won, haha. 
+
+## Credits
+This website makes use of code from Haiku and https://github.com/GoulartNogueira/BadUI
