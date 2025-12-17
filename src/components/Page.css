@@ -289,8 +289,8 @@ font-size: 2rem;
 }
 
 .submit-button {
-  background-color: rgba(99, 214, 32, 0.9);
-  color: #5a197d;
+  background-color: #ff0000;
+  color: #000000;
   border: none;
   padding: 12px 30px;
   font-size: 1rem;
@@ -304,6 +304,189 @@ font-size: 2rem;
 .submit-button:hover {
   background-color: white;
   transform: scale(1.05);
+}
+
+.password-error {
+  background-color: rgba(255, 0, 0, 0.15);
+  border: 2px solid #cc0000;
+  color: #cc0000;
+  padding: 12px 16px;
+  border-radius: 5px;
+  font-weight: 600;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.verification-message {
+  background-color: rgba(0, 255, 0, 0.15);
+  border: 2px solid #00aa00;
+  color: #00aa00;
+  padding: 12px 16px;
+  border-radius: 5px;
+  font-weight: 600;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.resend-container {
+  margin: 1.5rem 0;
+}
+
+.resend-button {
+  background-color: rgba(100, 100, 100, 0.7);
+  color: white;
+  border: 2px solid rgba(100, 100, 100, 0.9);
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.resend-button:not(.disabled):hover {
+  background-color: rgba(80, 80, 80, 0.9);
+  transform: scale(1.05);
+}
+
+.resend-button.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.resend-button.disabled:hover {
+  transform: none;
+}
+
+.captcha-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 5px;
+}
+
+.captcha-box {
+  aspect-ratio: 1;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.captcha-box:hover {
+  transform: scale(1.05);
+  border-color: rgba(100, 100, 100, 0.5);
+}
+
+.captcha-box.selected {
+  background-color: #cc0000;
+  border-color: #990000;
+  box-shadow: 0 0 10px rgba(204, 0, 0, 0.5);
+}
+
+.box-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f0f0;
+  border-radius: 4px;
+  color: #666;
+  font-weight: 600;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.captcha-box.selected .box-content {
+  background: #cc0000;
+  color: white;
+}
+
+.box-placeholder {
+  font-size: 0.9rem;
+}
+
+.captcha-upload-section {
+  margin: 1rem 0;
+}
+
+.upload-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #333;
+  text-align: left;
+}
+
+.file-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.file-input::-webkit-file-upload-button {
+  padding: 8px 16px;
+  background: rgba(100, 100, 100, 0.7);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.captcha-display {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.captcha-image {
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 3px;
+}
+
+.disabled-input {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: rgba(200, 200, 200, 0.5) !important;
+}
+
+.captcha-error {
+  background-color: rgba(255, 0, 0, 0.15);
+  border: 2px solid #cc0000;
+  color: #cc0000;
+  padding: 12px 16px;
+  border-radius: 5px;
+  font-weight: 600;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .captcha-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    padding: 0.75rem;
+  }
 }
 
 .nav-button {
@@ -363,6 +546,63 @@ font-size: 2rem;
   transform: translateY(0);
 }
 
+.minesweeper-container {
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.minesweeper-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 4px;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  width: fit-content;
+}
+
+.minesweeper-cell {
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(100, 100, 100, 0.6);
+  background: rgba(200, 200, 200, 0.8);
+  color: #333;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.2s ease;
+  padding: 0;
+  font-family: inherit;
+}
+
+.minesweeper-cell:hover:not(:disabled) {
+  background: rgba(220, 220, 220, 0.9);
+  transform: scale(1.08);
+}
+
+.minesweeper-cell.revealed {
+  background: rgba(150, 150, 150, 0.7);
+  border-color: rgba(80, 80, 80, 0.8);
+  color: #2d2d2d;
+  cursor: default;
+}
+
+.minesweeper-cell.flagged {
+  background: rgba(255, 200, 100, 0.8);
+  border-color: #cc8800;
+}
+
+.minesweeper-cell.mine {
+  background: #cc0000;
+  color: white;
+}
+
+.minesweeper-cell:disabled {
+  cursor: not-allowed;
+}
+
 @media (max-width: 768px) {
   .page {
     padding: 1rem;
@@ -407,5 +647,15 @@ font-size: 2rem;
 
   .contact-form {
     padding: 1.5rem;
+  }
+
+  .minesweeper-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .minesweeper-cell {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
   }
 }
