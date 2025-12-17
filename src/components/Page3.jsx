@@ -49,7 +49,7 @@ export default function Page3({ onNext }) {
           <button type="submit" className="submit-button">Submit</button>
         </form>
         <button className="find-meaning-btn" onClick={onNext}>
-          Find meaning
+          Turn to Religion
         </button>
       </div>
     </section>

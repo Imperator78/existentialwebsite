@@ -72,12 +72,14 @@ export default function Page14({ onNext }) {
   const handleCellClick = (index) => {
     if (gameOver || won || revealed.has(index) || flagged.has(index)) return
 
+    let currentGrid = grid
+    
     // Ensure first click is always safe
     if (firstClick) {
       setFirstClick(false)
-      // Remove any mine at this position and place it elsewhere
-      const cell = grid[index]
-      if (cell.mine) {
+      
+      // Check if first click is a mine
+      if (grid[index].mine) {
         const newGrid = grid.map(c => ({ ...c }))
         newGrid[index].mine = false
         
@@ -88,13 +90,23 @@ export default function Page14({ onNext }) {
         }
         newGrid[newPos].mine = true
         
-        // Recalculate adjacent counts
-        for (let i = 0; i < GRID_SIZE * GRID_SIZE; i++) {
-          if (!newGrid[i].mine) {
+        // Recalculate adjacent counts for affected cells
+        const cellsToUpdate = new Set([index, newPos])
+        for (let i = -1; i <= 1; i++) {
+          for (let j = -1; j <= 1; j++) {
+            const cellIndex = index + i * GRID_SIZE + j
+            const newPosIndex = newPos + i * GRID_SIZE + j
+            if (cellIndex >= 0 && cellIndex < GRID_SIZE * GRID_SIZE) cellsToUpdate.add(cellIndex)
+            if (newPosIndex >= 0 && newPosIndex < GRID_SIZE * GRID_SIZE) cellsToUpdate.add(newPosIndex)
+          }
+        }
+        
+        cellsToUpdate.forEach(i => {
+          if (i >= 0 && i < GRID_SIZE * GRID_SIZE && !newGrid[i].mine) {
             let count = 0
             const row = Math.floor(i / GRID_SIZE)
             const col = i % GRID_SIZE
-
+            
             for (let dr = -1; dr <= 1; dr++) {
               for (let dc = -1; dc <= 1; dc++) {
                 const nr = row + dr
@@ -107,12 +119,14 @@ export default function Page14({ onNext }) {
             }
             newGrid[i].adjacent = count
           }
-        }
+        })
+        
+        currentGrid = newGrid
         setGrid(newGrid)
       }
     }
 
-    const cell = grid[index]
+    const cell = currentGrid[index]
 
     if (cell.mine) {
       // Hit a mine - game over
@@ -256,7 +270,7 @@ export default function Page14({ onNext }) {
         )}
 
         <button className="find-meaning-btn" onClick={onNext}>
-          Find meaning
+          Turn to Religion
         </button>
       </div>
     </section>

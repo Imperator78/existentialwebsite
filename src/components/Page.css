@@ -54,8 +54,14 @@ font-size: 2rem;
 
 .page-2 h2 {
   font-size: 2.5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   color: #333333;
+}
+
+.page-2 h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #444444;
 }
 
 .page-3 {
@@ -619,7 +625,10 @@ font-size: 2rem;
     font-size: 1rem;
   }
 
-  .page-2 h2,
+  .page-2 h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
   .page-3 h2 {
     font-size: 1.8rem;
     margin-bottom: 2rem;
@@ -650,7 +659,7 @@ font-size: 2rem;
   }
 
   .minesweeper-grid {
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(6, 1fr);
   }
 
   .minesweeper-cell {

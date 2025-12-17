@@ -51,7 +51,7 @@ export default function Page8({ onNext }) {
         </form>
 
         <button className="find-meaning-btn" onClick={onNext}>
-          Find meaning
+          Turn to Religion
         </button>
       </div>
     </section>

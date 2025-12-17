@@ -76,7 +76,7 @@ export default function Page7({ onNext }) {
         </div>
 
         <button className="find-meaning-btn" onClick={onNext}>
-          Find meaning
+          Turn to Religion
         </button>
       </div>
     </section>

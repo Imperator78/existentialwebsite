@@ -111,6 +111,7 @@ export default function Page2({ onNext }) {
     <section className="page page-2">
       <div className="page-content">
         <h2>Set Up Your Account</h2>
+        <h3>We see you want to chat with <span style={{ color: '#e40101ff' }}>Godot</span>, follow these simple steps to get started</h3>
         <form className="account-form" onSubmit={handleSubmit}>
           <div className="form-row">
             <input
@@ -214,8 +215,8 @@ export default function Page2({ onNext }) {
             />
           </div>
         </form>
-        <button class="find-meaning-btn" onClick={onNext}>
-          Find meaning
+        <button className="find-meaning-btn" onClick={onNext}>
+          Turn to Religion
         </button>
       </div>
     </section>
