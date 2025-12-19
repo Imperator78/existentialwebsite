@@ -107,15 +107,6 @@ export default function Page2({ onNext }) {
     console.log('Account setup form submitted:', formData)
   }
 
-  // Check if all fields are filled
-  const isFormComplete = formData.name && formData.email && formData.phone > 0 && formData.address && formData.mothersFirstName && formData.birthdate && formData.mothersMaidenName && formData.ssn
-
-  const handleNext = () => {
-    if (isFormComplete) {
-      onNext()
-    }
-  }
-
   return (
     <section className="page page-2">
       <div className="page-content">
@@ -224,14 +215,6 @@ export default function Page2({ onNext }) {
             />
           </div>
         </form>
-        <button 
-          className="submit-button" 
-          onClick={handleNext}
-          disabled={!isFormComplete}
-          style={{ opacity: isFormComplete ? 1 : 0.5, cursor: isFormComplete ? 'pointer' : 'not-allowed' }}
-        >
-          Next →
-        </button>
         <button className="find-meaning-btn" onClick={onNext}>
           Turn to Religion
         </button>
