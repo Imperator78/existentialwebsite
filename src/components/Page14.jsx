@@ -237,7 +237,7 @@ export default function Page14({ onNext }) {
   return (
     <section className="page page-3">
       <div className="page-content">
-        <h2>Win this game to access the chat</h2>
+        <h2>Whoops. You need some coins to chat. But don't worry, you can win some coins from this game.</h2>
         <p>Nothing happens. Nobody comes, nobody goes. It's awful.</p>
         
         <div className="minesweeper-container">

@@ -20,13 +20,11 @@ export default function Page2({ onNext }) {
   const speedRef = useRef(0)
   const angleRef = useRef(0)
 
-  // Phone value converted to display format
   const phoneNumberToDisplay = (value) => {
     const str = value.toString().padStart(11, '0')
     return `(${str.substr(0, 2)}) ${str.substr(2, 3)}-${str.substr(5, 3)}-${str.substr(8, 3)}`
   }
 
-  // Physics-based phone value update
   useEffect(() => {
     const friction = 0.99
     
@@ -36,14 +34,11 @@ export default function Page2({ onNext }) {
       let newSpeed = speedRef.current
       let newAngle = angleRef.current
       
-      // Speed is based on angle
       newSpeed += Math.sin(newAngle * Math.PI / 180) * 1000
-      // Friction
       newSpeed *= friction
       
       let newValue = Number(sliderRef.current.value) + Math.round(newSpeed * 100000)
       
-      // Bounce off edges
       if (newValue > 99999999999) {
         newValue = 99999999999
         newSpeed *= -1
@@ -103,11 +98,9 @@ export default function Page2({ onNext }) {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Form data is stored in state, ready to be used
     console.log('Account setup form submitted:', formData)
   }
 
-  // Check if all fields are filled
   const isFormComplete = formData.name && formData.email && formData.phone > 0 && formData.address && formData.mothersFirstName && formData.birthdate && formData.mothersMaidenName && formData.ssn
 
   const handleNext = () => {

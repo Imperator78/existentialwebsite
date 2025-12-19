@@ -9,19 +9,17 @@ export default function Page3({ onNext }) {
   const handleSubmit = (e) => {
     e.preventDefault()
     
-    // Always show error message
+    // always show error message
     setError('Passwords do not match. Please check again.')
   }
 
   const handlePasswordChange = (e) => {
     setPassword(e.target.value)
-    // Clear error when user starts typing
     if (error) setError('')
   }
 
   const handleConfirmPasswordChange = (e) => {
     setConfirmPassword(e.target.value)
-    // Clear error when user starts typing
     if (error) setError('')
   }
 
