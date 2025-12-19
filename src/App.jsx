@@ -15,7 +15,6 @@ import PageFinal from './components/PageFinal'
 
 
 function App() {
-  // Make `Infinite` the initial page for now (index 3)
   const [currentPage, setCurrentPage] = useState(0)
   
   const pages = [

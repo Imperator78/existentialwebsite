@@ -217,14 +217,6 @@ export default function Page2({ onNext }) {
             />
           </div>
         </form>
-        <button 
-          className="submit-button" 
-          onClick={handleNext}
-          disabled={!isFormComplete}
-          style={{ opacity: isFormComplete ? 1 : 0.5, cursor: isFormComplete ? 'pointer' : 'not-allowed' }}
-        >
-          Next →
-        </button>
         <button className="find-meaning-btn" onClick={onNext}>
           Turn to Religion
         </button>
